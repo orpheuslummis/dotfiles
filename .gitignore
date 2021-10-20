@@ -1,0 +1,4 @@
+.vscode
+.netrwhist
+config/nvim/plugged
+config/htop/htoprc

@@ -1,0 +1,71 @@
+[user]
+	email = o@orpheuslummis.info
+	name = Orpheus Lummis
+
+[core]
+    excludesfile = $HOME/.gitignore
+
+[alias]
+    s              = status -sb
+    a              = add
+#     all            = add -A
+#     amend          = commit --amend -C HEAD
+#     ap             = add -p
+#     au             = add -u
+#     b              = branch
+#     br             = branch
+#     ci             = commit
+#     cl             = clone
+#     co             = checkout
+#     d              = diff
+#     dc             = diff --cached
+#     di             = diff
+#     dic            = diff --cached
+#     distat         = diff --stat -r
+#     l              = log --graph --pretty=format:'%h -%d %s (%cr) <%an>'
+#     ls             = log --stat --abbrev-commit
+#     h              = help
+#     pl             = pull --ff-only
+#     pull           = pull --ff-only
+#     pu             = push
+#     puhs           = push
+#     rb             = rebase
+#     st             = status -sb
+#     sub            = submodule
+#     undo           = reset --hard
+#     unstage        = reset HEAD
+
+# [color]
+#     ui             = auto
+#     interactive    = auto
+
+# [core]
+#     filemode       = false
+
+# [diff]
+#     tool           = vimdiff
+
+# [push]
+#     # NOTE: use upstream if Git is older than 1.8, simple otherwise
+#     default        = simple
+
+# [i18n]
+#     commitencoding = UTF-8
+
+# [merge]
+#     tool           = vimdiff
+
+# [mergetool]
+#   prompt = true
+
+# [mergetool "vimdiff"]
+#   cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+# [difftool]
+#   prompt = false
+
+# [credential]
+#     helper         = cache
+
+# [apply]
+# 	whitespace       = fix

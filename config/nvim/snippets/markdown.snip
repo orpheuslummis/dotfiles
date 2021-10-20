@@ -1,0 +1,13 @@
+snippet date
+    `strftime("%Y-%m-%d")`
+
+snippet now
+    `strftime("%Y-%m-%d %H%M %Z")`
+
+snippet newd
+    ---
+    title: $1
+    last-update: `strftime("%Y-%m-%d %H%M %Z")`
+    ---
+    
+    $0
