@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# cloudshell, debian buster
+# to use mainly with openvscodeserver
+
+sudo apt update
+sudo apt install -y ripgrep ncdu ranger fzf git htop fd-find jq rsync psmisc # when bullseye : bat
+
+# hand-built neovim stuff 
+#sudo apt-get install -y libevent-dev ncurses-dev build-essential bison pkg-config
+#sudo apt-get install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
+# sudo npm install -g typescript-language-server typescript bash-language-server graphql-language-service-cli
