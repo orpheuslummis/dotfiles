@@ -15,6 +15,8 @@ rm -rf $HOME/.config/ranger
 ln -sfv $PWD/config/ranger $HOME/.config/ranger
 rm -rf $HOME/.config/htop
 ln -sfv $PWD/config/htop $HOME/.config/htop
+rm -rf $HOME/.config/procps
+ln -sfv $PWD/config/procps $HOME/.config/procps
 
 mkdir -p $HOME/.ssh
 rm $HOME/.ssh/config
