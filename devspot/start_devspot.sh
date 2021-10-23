@@ -1,5 +1,7 @@
 #!/bin/bash
 
+script_full_path=$(dirname "$0")
+
 gcloud beta compute instances create devspot \
     --zone us-east1-b \
     --provisioning-model=SPOT \
@@ -8,5 +10,5 @@ gcloud beta compute instances create devspot \
     --image-family=debian-11 \
     --boot-disk-size=5GB \
     --disk=auto-delete=no,name=h1 \
-    --metadata-from-file=startup-script=devspot_setup.sh \
-    --metadata-from-file shutdown-script=devspot_shutdown.sh
+    --metadata-from-file=startup-script=$script_full_path/devspot_setup.sh \
+    --metadata-from-file shutdown-script=$script_full_path/devspot_shutdown.sh
