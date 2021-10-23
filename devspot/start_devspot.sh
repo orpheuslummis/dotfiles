@@ -1,6 +1,8 @@
 #!/bin/bash
 
-script_full_path=$(dirname "$0")
+
+p=$PWD
+cd $(dirname "$0")
 
 gcloud beta compute instances create devspot \
     --zone us-east1-b \
@@ -8,7 +10,13 @@ gcloud beta compute instances create devspot \
     --machine-type=e2-standard-2 \
     --image-project=debian-cloud \
     --image-family=debian-11 \
-    --boot-disk-size=5GB \
     --disk=auto-delete=no,name=h1 \
-    --metadata-from-file=startup-script=$script_full_path/devspot_setup.sh \
-    --metadata-from-file shutdown-script=$script_full_path/devspot_shutdown.sh
+    --metadata-from-file startup-script=devspot_startup.sh \
+    --metadata shutdown-script='#! /bin/bash
+	t=$(date -u +"%Y-%m-%d_%H%M")
+	echo "SHUTDOWN!! $t"
+	sudo -u o sh -c "mv $HOME/dev/dotfiles/bash_history $HOME/dev/dotfiles/bash_history.$t.bak"
+	sudo -u o sh -c "cp $HOME/.bash_history $HOME/dev/dotfiles/"
+'
+
+cd $p
