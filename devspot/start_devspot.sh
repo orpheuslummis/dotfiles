@@ -3,7 +3,7 @@
 gcloud beta compute instances create devspot \
 --zone us-east1-b \
 --provisioning-model=SPOT \
---machine-type=e2-micro    \
+--machine-type=e2-standard-2 \
 --image-project=debian-cloud \
 --image-family=debian-11 \
 --boot-disk-size=5GB \
