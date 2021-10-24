@@ -24,8 +24,10 @@ ln -sfv $PWD/config/procps $HOME/.config/procps
 mkdir -p $HOME/.ssh
 rm -f $HOME/.ssh/config
 ln -sfv $PWD/ssh/config $HOME/.ssh/config
-ln -sfv $PWD/ssh/config $HOME/.ssh/id_ed25519
-ln -sfv $PWD/ssh/config $HOME/.ssh/id_ed25519.pub
+cp $PWD/ssh/id_ed25519 $HOME/.ssh/id_ed25519
+chmod 600 $HOME/.ssh/id_ed25519
+cp  $PWD/ssh/id_ed25519.pub $HOME/.ssh/id_ed25519.pub
+chmod 600 $HOME/.ssh/id_ed25519.pub
 
 # nvim plugins
 #sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
